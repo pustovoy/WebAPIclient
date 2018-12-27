@@ -1,0 +1,13 @@
+C:\Users\Yuri\source\repos\WebAPIclient\WebAPIclient\bin\Debug\WebAPIclient.exe.config
+C:\Users\Yuri\source\repos\WebAPIclient\WebAPIclient\bin\Debug\WebAPIclient.exe
+C:\Users\Yuri\source\repos\WebAPIclient\WebAPIclient\bin\Debug\WebAPIclient.pdb
+C:\Users\Yuri\source\repos\WebAPIclient\WebAPIclient\obj\Debug\WebAPIclient.csprojAssemblyReference.cache
+C:\Users\Yuri\source\repos\WebAPIclient\WebAPIclient\obj\Debug\WebAPIclient.csproj.CoreCompileInputs.cache
+C:\Users\Yuri\source\repos\WebAPIclient\WebAPIclient\obj\Debug\WebAPIclient.exe
+C:\Users\Yuri\source\repos\WebAPIclient\WebAPIclient\obj\Debug\WebAPIclient.pdb
+C:\Users\Yuri\source\repos\WebAPIclient\WebAPIclient\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Yuri\source\repos\WebAPIclient\WebAPIclient\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Yuri\source\repos\WebAPIclient\WebAPIclient\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\Yuri\source\repos\WebAPIclient\WebAPIclient\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Yuri\source\repos\WebAPIclient\WebAPIclient\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Yuri\source\repos\WebAPIclient\WebAPIclient\obj\Debug\WebAPIclient.csproj.CopyComplete
