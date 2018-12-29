@@ -1,34 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 using WebAPIclient.Controllers;
 using WebAPIclient.Models;
+using WebAPIclient.Services;
 
 namespace WebAPIclient.Processors
 {
     public class WeatherProcessor
     {
-        public static async Task<WeatherModel> LoadWeatherAsync(string city)
+        public static async Task<ModelList> LoadWeatherAsync(string city, int count)
         {
-            string url;
-            url = city != default ? $"api.openweathermap.org/data/2.5/weather?q={city}" : $"api.openweathermap.org/data/2.5/weather?q=London";
-
-            using (HttpResponseMessage response = await ApiController.ApiClient.GetAsync(url))
+            var url = city != "" ? $"http://api.openweathermap.org/data/2.5/forecast?q={city}&units=metric&cnt={count}&APPID=c78041785ed9e31d95b0f8fe7cfe1221" : $"http://api.openweathermap.org/data/2.5/forecast?q=London&units=metric&APPID=c78041785ed9e31d95b0f8fe7cfe1221";
+            try
             {
-                if (response.IsSuccessStatusCode)
-                {
-                    WeatherModel weather = await response.Content.ReadAsAsync<WeatherModel>();
-                    return weather;
-                }
-                else
-                {
-                    throw new Exception(response.ReasonPhrase);
-                }
-
+                var response = await WebApiController.WebApiClient.DownloadStringTaskAsync(url);            
+                return JsonConvert.DeserializeObject<ModelList>(response);
             }
+            catch (Exception e)
+            {
+                ErrorLogService.StoreErrorLog(e.ToString());
+            }
+            return null;
         }
     }
 }
