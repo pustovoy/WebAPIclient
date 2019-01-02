@@ -41,12 +41,15 @@ namespace WebAPIclient.UI
 
         public async Task Help()
         {
-            Console.WriteLine("--------- LIST OF COMMANDS ----------");
-            foreach (var commandsKey in _commands.Keys)
+            await Task.Run(() =>
             {
-                Console.WriteLine($"{commandsKey}");
-            }
-            Console.WriteLine("-------------------------------------");
+                Console.WriteLine("--------- LIST OF COMMANDS ----------");
+                foreach (var commandsKey in _commands.Keys)
+                {
+                    Console.WriteLine($"{commandsKey}");
+                }
+                Console.WriteLine("-------------------------------------");
+            });
         }
 
         public async Task CityList()

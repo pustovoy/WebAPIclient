@@ -58,6 +58,7 @@
     <Compile Include="Models\MainModel.cs" />
     <Compile Include="Models\ModelList.cs" />
     <Compile Include="Models\RootModel.cs" />
+    <Compile Include="Models\UserModel.cs" />
     <Compile Include="Processors\GitHubProcessor.cs" />
     <Compile Include="Processors\WeatherProcessor.cs" />
     <Compile Include="Program.cs" />

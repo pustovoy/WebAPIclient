@@ -20,9 +20,9 @@ namespace WebAPIclient
             Console.WriteLine($"Welcome tp the GITHUB WebHTTPClient!");
             Console.ForegroundColor = ConsoleColor.Yellow;
             GitHubProcessor GHProcessor = new GitHubProcessor();
-            GHProcessor.endPoint = "https://api.github.com/user";
+            GHProcessor.EndPoint = "https://api.github.com/user";
             Console.WriteLine("YOUR RESPONSE IS:");
-            Task t = new Task(() => GHProcessor.MakeRequestAsync());
+            Task t = new Task(async () => await GHProcessor.PatchAsync());
             t.Start();
             Console.ReadLine();
 
